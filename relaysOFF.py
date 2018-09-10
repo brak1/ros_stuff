@@ -5,14 +5,15 @@ import datetime
 
 ser = serial.Serial('/dev/ttyUSB1')  # open serial port
 print(ser.name)         # check port
-ser.write("\xFF\x01\x00")
-ser.write("\xFF\x02\x00")
-ser.write("\xFF\x03\x00")
-ser.write("\xFF\x04\x00")
-ser.write("\xFF\x05\x00")
-ser.write("\xFF\x06\x00")
-ser.write("\xFF\x07\x00")
-ser.write("\xFF\x08\x00")
+ser.write("\xff\x00\x00")
+#ser.write("\xFF\x01\x00")
+#ser.write("\xFF\x02\x00")
+#ser.write("\xFF\x03\x00")
+#ser.write("\xFF\x04\x00")
+#ser.write("\xFF\x05\x00")
+#ser.write("\xFF\x06\x00")
+#ser.write("\xFF\x07\x00")
+#ser.write("\xFF\x08\x00")
 ser.close()
 print (datetime.datetime.now())
 
