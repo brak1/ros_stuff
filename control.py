@@ -31,29 +31,24 @@ if __name__=="__main__":
         while True:
             key = getKey()
             if key == "4":
+                print key + " pressed"
                 ser1.write("\xff\x00\x01")
                 ser2.write("M0")
             elif key == "6":
+                print key + " pressed"
                 ser1.write("\xff\x01\x01")
                 ser2.write("M0")
             elif key == "\x03":
                 break
             else:
+                print key + " pressed"
                 ser1.write("\xff\x00\x00")
                 
             print (datetime.datetime.now())
-            time.sleep(0.5)
-            
+            #time.sleep(0.5)
             #value = click.prompt('Please enter something')
             #print value
-            #ser.write("\xFF\x01\x01")
-            #ser.write("\xFF\x02\x01")
-            #ser.write("\xFF\x03\x01")
-            #ser.write("\xFF\x04\x01")
-            #ser.write("\xFF\x05\x01")
-            #ser.write("\xFF\x06\x01")
-            #ser.write("\xFF\x07\x01")
-            #ser.write("\xFF\x08\x01")
+            
     except KeyboardInterrupt:
         print(" keyboard interrupt received...")
     finally:
@@ -70,7 +65,7 @@ if __name__=="__main__":
 
 
 
-
+# OTHER STUFF 
 #>>> ser = serial.Serial()
 #>>> ser.baudrate = 19200
 #>> ser.port = 'COM1'
@@ -82,3 +77,11 @@ if __name__=="__main__":
 #>>> ser.close()
 #>>> ser.is_open
 #False
+#ser.write("\xFF\x01\x01")
+#ser.write("\xFF\x02\x01")
+#ser.write("\xFF\x03\x01")
+#ser.write("\xFF\x04\x01")
+#ser.write("\xFF\x05\x01")
+#ser.write("\xFF\x06\x01")
+#ser.write("\xFF\x07\x01")
+#ser.write("\xFF\x08\x01")
