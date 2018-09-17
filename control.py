@@ -12,6 +12,9 @@ def getKey():
 if __name__=="__main__":
     settings = termios.tcgetattr(sys.stdin)
 
+    filename="myFile.txt"
+    datafile=open(filename, 'a')
+
     ser1opened = False
     ser1 = serial.Serial('/dev/ttyUSB0')
     ser1.baudrate = 9600
@@ -32,18 +35,21 @@ if __name__=="__main__":
             key = getKey()
             if key == "4":
                 print key + " pressed"
-                ser1.write("\xff\x00\x01")
+                ser1.write("\xff\x01\x01")
+                ser1.write("\xff\x02\x00")
                 ser2.write("M0")
             elif key == "6":
                 print key + " pressed"
-                ser1.write("\xff\x01\x01")
+                ser1.write("\xff\x01\x00")
+                ser1.write("\xff\x02\x01")
                 ser2.write("M0")
             elif key == "\x03":
                 break
             else:
                 print key + " pressed"
                 ser1.write("\xff\x00\x00")
-                
+                data = ser2.readline()
+                datafile.write(data)
             print (datetime.datetime.now())
             #time.sleep(0.5)
             #value = click.prompt('Please enter something')
@@ -58,6 +64,7 @@ if __name__=="__main__":
         if ser2opened:
             ser2.close()
             print "Closed ser2"
+        datafile.close()
         print "Cleaned up program and exiting"
     
     
