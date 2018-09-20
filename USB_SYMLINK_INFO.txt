@@ -1,24 +1,24 @@
 INFORMATION ON HOW TO SYMLINK A USB DEVICE
 
 
-1. find out what's on ttyUSB:
+1. Check ttyUSB:
 
 dmesg | grep ttyUSB  
 
-2. list all attributes of the device:
+2. List device attributes:
 
 udevadm info --name=/dev/ttyUSBx --attribute-walk
 
-3. Create a file /etc/udev/rules.d/99-usb-serial.rules with something like this line in it:
+3. Make file /etc/udev/rules.d/99-usb-serial.rules with...:
 
 SUBSYSTEM=="tty", KERNELS=="1-1", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="xstick1"
 SUBSYSTEM=="tty", KERNELS=="1-3", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="xstick2"
 
-4. Load the new rule:
+4. Load rules:
 
 sudo udevadm trigger
 
-5. Verify what happened:
+5. Test:
 
 ls -l /dev/xstick1
 
@@ -27,6 +27,4 @@ ls -l /dev/ttyUSB0
 6. Another test
 
 udevadm test -a -p  $(udevadm info -q path -n /dev/xstick1
-
-7. Lookin' good
 
