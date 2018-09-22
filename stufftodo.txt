@@ -1,0 +1,25 @@
+# Fun stuff to do! 
+#
+#1.  Install some Java runtime stuff; sudo apt-get install default-jre
+#2.  Install some Eclipse IDE; download that C,C++ version
+#3.  Maybe install PyDev so you can do Python stuff (Help->Marketplace ... in Eclipse)
+#4.  Do this thing in a file on the Desktop folder called Eclipse.desktop:
+#	Desktop Entry]
+#	Version=1.0
+#	Name=Eclipse
+#	Comment=Java IDE
+#	Type=Application
+#	Categories=Development;IDE;
+#	Exec=/home/{username}/Programs/eclipse/eclipse
+#	Terminal=false
+#	StartupNotify=true
+#	Icon=/home/{username}/Programs/eclipse/icon.xpm
+#	Name[en_US]=Eclipse
+#5.  Install this: sudo apt-get install ros-melodic-moveit-ros-planning
+#6.  Go get this:  https://github.com/ros-industrial/industrial_core 
+#7.  Assuming to put this in a catkin tools workspace, build it!
+#8.  Then try to get this:  git clone https://github.com/ros-industrial/motoman.git
+#9.  Does it build - catkin build 
+#10. Now go do stuff
+
+
