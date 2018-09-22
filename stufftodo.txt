@@ -21,5 +21,6 @@
 #8.  Then try to get this:  git clone https://github.com/ros-industrial/motoman.git
 #9.  Does it build - catkin build 
 #10. Now go do stuff
+#11. http://wiki.ros.org/Industrial/Tutorials 
 
 
