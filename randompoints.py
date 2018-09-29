@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from mpl_toolkits.mplot3d import axes3d
+from scipy.signal import savgol_filter
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -14,8 +15,15 @@ for d in range(0,n):
 	r=0.002*(random.randint(0,1000)-500)
 	s[d]=s[d]+(r*r)
 
+shat = savgol_filter(s, 81, 2) # window size 51, polynomial order 3import matplotlib.pyplot as plt
+
 fig=plt.figure()
-plt.plot(p, s)
+#plt.plot(p, s)
+plt.plot(s)
+plt.show()
+
+fig2=plt.figure()
+plt.plot(shat)
 plt.show()
 
 
