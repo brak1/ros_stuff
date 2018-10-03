@@ -21,7 +21,7 @@ for row in reader:
             print '%-8s: %s' % (header[colnum], col)
             colnum += 1
             if (colnum==1) and (len(row)>1):
-                results.append(row[1])
+                results.append(float(row[1]))
         if len(row)>1:
             print "row1 is: ", row[1]
     rownum += 1
