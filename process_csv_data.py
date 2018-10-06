@@ -9,6 +9,11 @@ from math import sqrt
 from mpl_toolkits.mplot3d import axes3d
 from scipy.signal import savgol_filter
 
+def smooth(y, box_pts):
+    box = np.ones(box_pts)/box_pts
+    y_smooth = np.convolve(y, box, mode='same')
+    return y_smooth
+
 
 ifile  = open('sample.csv', "rb")
 reader = csv.reader(ifile)
@@ -48,7 +53,7 @@ print len(p)
 
 s_smooth = savgol_filter(results, 401, 2) # window size 51, polynomial order 3import matplotlib.pyplot as plt
 s_smooth2 = savgol_filter(results,51,4)
-s_smooth3 = savgol_filter(results,101,2)
+s_smooth3 = smooth(results,12)
 
 fig=plt.figure()
 fig.suptitle("CSV Datapoints Smoothing and Processed")
