@@ -23,4 +23,4 @@
 #10. Now go do stuff
 #11. http://wiki.ros.org/Industrial/Tutorials 
 #12. https://stackoverflow.com/questions/20618804/how-to-smooth-a-curve-in-the-right-way
-
+#13. https://towardsdatascience.com/tensorflow-reflective-tape-why-im-bad-at-basketball-a30a923332de
