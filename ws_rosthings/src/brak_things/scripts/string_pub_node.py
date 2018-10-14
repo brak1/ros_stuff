@@ -26,7 +26,7 @@ if __name__=="__main__":
         rospy.loginfo(hello_str)
         pub.publish(hello_str)
       
-        while True:
+        while not rospy.is_shutdown():
             rospy.sleep(2)
             this_time = time.time()
             msg = str(this_time) + " was the time"

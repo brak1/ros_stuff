@@ -26,7 +26,7 @@ if __name__=="__main__":
         rospy.loginfo(hello_str)
         pub.publish(hello_str)
       
-        while True:
+        while not rospy.is_shutdown():
             key = getKey()
             if key == "4":
                 print key + " pressed"
