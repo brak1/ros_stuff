@@ -1,0 +1,4 @@
+<launch>
+  <node name="keyboard_node" pkg="brak_things" type="keyboard_node.py" />
+  <node name="string_pub_node" pkg="brak_things" type="string_pub_node.py" />
+</launch>

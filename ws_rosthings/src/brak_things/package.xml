@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>brak_things</name>
+  <version>0.0.1</version>
+  <description>Garage code activities</description>
+  <maintainer email="brak1@none.none">brak1</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+
+  <run_depend>rospy</run_depend>
+
+  <export>
+  </export>
+</package>
