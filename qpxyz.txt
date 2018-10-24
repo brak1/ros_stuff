@@ -6,15 +6,23 @@ import numpy as np
 from _ast import Num
 from math import sqrt
 
+results = []
 np.random.seed(0)
 n = 150
 x = np.linspace(0,408,n)
 y = np.linspace(0,50,40) 
 z = np.random.random((len(x), len(y)))
-print(z)
+#print(z)
 
 ifile  = open('sample.csv', "rb")
-for i in x: 
-	for j in y:
-		#write the line with an x, y, z 
+content = ifile.readlines()
+for line in content: 
+	print line
+	
+	
+	
+print "The end." 
+	
+#	for j in y:
+#		#write the line with an x, y, z 
 		
