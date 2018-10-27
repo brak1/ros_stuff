@@ -15,6 +15,18 @@ print 'Connection address:', addr
 while 1:
     data = conn.recv(BUFFER_SIZE)
     if not data: break
-    print "received data:", data
+    print "received 1 data:", data
     conn.send(data)  # echo
 conn.close()
+print "after while 1" 
+
+while 1: 
+    conn, addr = s.accept()
+    while 1:
+        data = conn.recv(BUFFER_SIZE)
+        if not data: break
+        print "received 2 data:", data
+        conn.send(data)  # echo
+    conn.close()
+    print "ready for next message"
+
