@@ -13,5 +13,5 @@ Y = [ -1 y]; % add a first index to fill
 Z = [ clock_now(6) z]; % add the "X" value for this file, using the current seconds
 csvwrite(filename, [Y' Z']); 
 
-%figure; 
-%plot(y,z); 
+figure; 
+plot(y,z); 
