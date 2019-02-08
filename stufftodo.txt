@@ -26,4 +26,7 @@
 #13. https://towardsdatascience.com/tensorflow-reflective-tape-why-im-bad-at-basketball-a30a923332de
 #14. http://wiki.ros.org/catkin/CMakeLists.txt Go here and install python stuff, launch files
 #15. https://docs.microsoft.com/en-us/windows-hardware/drivers/display/overriding-monitor-edids
+#16. Can we make a video from a bunch or images captured over time?
+#	https://askubuntu.com/questions/610903/how-can-i-create-a-video-file-from-a-set-of-jpg-images 
+
 
